@@ -345,6 +345,10 @@ _MULTIMODAL_MODELS = {
     "Glm4vForConditionalGeneration": ("glm4_1v", "Glm4vForConditionalGeneration"),
     "Glm4vMoeForConditionalGeneration": ("glm4_1v", "Glm4vMoeForConditionalGeneration"),
     "GlmOcrForConditionalGeneration": ("glm_ocr", "GlmOcrForConditionalGeneration"),  # noqa: E501
+    "CanaryQwenForConditionalGeneration": (
+        "canary_qwen",
+        "CanaryQwenForConditionalGeneration",
+    ),
     "GraniteSpeechForConditionalGeneration": (
         "granite_speech",
         "GraniteSpeechForConditionalGeneration",

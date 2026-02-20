@@ -742,6 +742,15 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         min_transformers_version="5.0.0",
     ),
     "GraniteVision": _HfExamplesInfo("ibm-granite/granite-vision-3.3-2b"),
+    "CanaryQwenForConditionalGeneration": _HfExamplesInfo(
+        "nvidia/canary-qwen-2.5b",
+        trust_remote_code=True,
+        hf_overrides={
+            "architectures": ["CanaryQwenForConditionalGeneration"],
+            "model_type": "canary_qwen",
+        },
+        tokenizer="Qwen/Qwen3-1.7B",
+    ),
     "GraniteSpeechForConditionalGeneration": _HfExamplesInfo(
         "ibm-granite/granite-speech-3.3-2b"
     ),
