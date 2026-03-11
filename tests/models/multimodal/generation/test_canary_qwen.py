@@ -58,7 +58,7 @@ def test_canary_qwen_transcription(
         trust_remote_code=True,
         limit_mm_per_prompt={"audio": 1},
         hf_overrides=hf_overrides,
-        tokenizer="Qwen/Qwen3-1.7B",
+        tokenizer_name="Qwen/Qwen3-1.7B",
     ) as vllm_model:
         outputs = vllm_model.generate_greedy(
             [prompt],

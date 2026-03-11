@@ -94,11 +94,11 @@ def main():
         gpu_memory_utilization=0.4,
         limit_mm_per_prompt={"audio": 1},
     )
-    sampling_params = SamplingParams(max_tokens=50, temperature=0.0)
+    sampling_params = SamplingParams(max_tokens=256, temperature=0.0)
 
-    prompt = "Transcribe the following: <|audioplaceholder|>"
+    prompt = "<|im_start|>user\nTranscribe the following: <|audioplaceholder|><|im_end|>\n<|im_start|>assistant\n"
 
-    # Test sample 0 (fails) and sample 9 (works)
+    # Test sample 0 and sample 9
     for idx in [0, 9]:
         item = ds[idx]
         audio_arr = item["audio"]["array"].astype(np.float32)
